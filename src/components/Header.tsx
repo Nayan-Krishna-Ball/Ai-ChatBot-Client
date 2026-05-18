@@ -3,6 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { useAuth } from "../context/AuthContext";
 import Logo from "./shared/Logo";
+import NavigationLink from "./shared/NavigationLink";
 
 const Header = () => {
   const auth = useAuth();
@@ -13,7 +14,7 @@ const Header = () => {
       <Toolbar sx={{ display: "flex" }}>
         <Logo />
         <div>
-          {/* {auth?.isLoggedIn ? (
+          {auth?.isLoggedIn ? (
             <>
               <NavigationLink
                 bg="#00fffc"
@@ -44,7 +45,7 @@ const Header = () => {
                 text="Signup"
               />
             </>
-          )} */}
+          )}
         </div>
       </Toolbar>
     </AppBar>
